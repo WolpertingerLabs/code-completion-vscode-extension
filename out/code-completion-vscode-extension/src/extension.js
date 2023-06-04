@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.deactivate = exports.activate = void 0;
 // The module 'vscode' contains the VS Code extensibility API
 const vscode = require("vscode");
-const perception_ts_gpt_1 = require("@wolpertingerlabs/perception-ts-gpt");
-console.log("Perception: ", perception_ts_gpt_1.DoNothing.getName());
+const Perception = require("../../perception-ts-gpt/src/modules");
+console.log("Perception: ", Perception.OpenAIRoutine.getName());
 function activate(context) {
     console.log("Code-completion-vscode-extension is now active.");
     // Code Completion command

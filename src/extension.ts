@@ -1,5 +1,8 @@
 // The module 'vscode' contains the VS Code extensibility API
 import * as vscode from "vscode";
+import { DoNothing } from "@wolpertingerlabs/perception-ts-gpt";
+
+console.log("Perception: ", DoNothing.getName());
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Code-completion-vscode-extension is now active.");
@@ -15,7 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
 
         // Add text where the cursor is
         textEditor.edit((editBuilder: vscode.TextEditorEdit) => {
-          editBuilder.insert(textEditor.selection.active, "Hello World!");
+          editBuilder.insert(textEditor.selection.active, "test");
         });
       },
     ),
